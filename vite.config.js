@@ -4,5 +4,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/simranportfolio/',
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/simranportfolio/' : '/',
 })
