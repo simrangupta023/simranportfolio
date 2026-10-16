@@ -23,9 +23,10 @@ A personal portfolio built with React, Vite and CSS.
 ## Edit the portfolio
 
 - Update the introduction, skills and social profile URLs in `src/App.jsx`.
+- Replace `src/assets/simran-gupta.png` to update the portrait shown in the hero.
 - Adjust colors, typography, spacing and responsive layouts in `src/index.css` and `src/App.css`.
 - Update the page title and search description in `index.html`.
-- The contact buttons open the visitor’s email application using a `mailto:` link. No contact form or backend is configured.
+- The contact form collects a visitor’s name, email, optional phone number, project type and message, then prepares an email to `simran92297@gmail.com` in their email application. The visitor must send that email themselves; the site does not store submissions. A backend or form service is needed to receive enquiries without relying on the visitor’s email application.
 - The optional Google Fonts import in `src/index.css` requires an internet connection; system sans-serif fonts are used as fallbacks.
 
 ## Check a production build
@@ -36,27 +37,15 @@ npm run build
 
 The generated production site is placed in `dist/`. To preview it locally, run `npm run preview`.
 
-## Upload to GitHub
+## Deploy with GitHub Pages
 
-1. Create a new, empty repository on GitHub. Do not add a README or `.gitignore` there if you want to push this existing project as-is.
-2. In this folder, initialize Git and make the first commit:
+The `main` branch is deployed automatically to GitHub Pages by the workflow in
+`.github/workflows/deploy.yml`. The Vite base path is configured for this
+repository, so the published site is:
 
-   ```sh
-   git init
-   git add .
-   git commit -m "Add Simran Gupta portfolio"
-   ```
+https://simrangupta023.github.io/simranportfolio/
 
-3. Add your GitHub repository as the remote and push the `main` branch:
-
-   ```sh
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-   git push -u origin main
-   ```
-
-Replace the example repository URL with your own. Never add passwords, API keys or private `.env` files to GitHub.
-
-## Deploy with Vercel
-
-Import the GitHub repository in Vercel. Vercel detects Vite automatically; use `npm run build` as the build command and `dist` as the output directory. Deployment is not configured or triggered by this project.
+In the repository's **Settings → Pages**, set the build and deployment source
+to **GitHub Actions** if it is not already selected. Every push to `main`
+triggers a new build and deployment. Never add passwords, API keys or private
+`.env` files to GitHub.

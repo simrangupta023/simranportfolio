@@ -2,21 +2,21 @@
 
 :root {
   font-family: 'DM Sans', sans-serif;
-  color: #f8f7f4;
-  background: #131411;
+  color: #263548;
+  background: #f6f3ed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --ink: #f8f7f4;
-  --muted: #aaa9a0;
-  --dark: #131411;
-  --dark-soft: #1b1c18;
-  --paper: #f2f0e9;
-  --lime: #d4f268;
-  --lilac: #c9b8ff;
-  --line: rgba(248, 247, 244, 0.14);
+  --ink: #263548;
+  --muted: #697482;
+  --dark: #f6f3ed;
+  --dark-soft: #eee9e0;
+  --paper: #fffdfa;
+  --lime: #ad684d;
+  --lilac: #d7c5ad;
+  --line: rgba(38, 53, 72, 0.15);
   --sans: 'DM Sans', sans-serif;
   --display: 'Manrope', 'DM Sans', sans-serif;
 
@@ -59,7 +59,7 @@ button {
 }
 
 ::selection {
-  color: var(--dark);
+  color: var(--paper);
   background: var(--lime);
 }
 
